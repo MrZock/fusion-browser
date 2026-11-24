@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Flow Browser</title>
+<meta name="description" content="Flow – der schlanke Browser für Gaming und Büro unter Windows 11. Unter 100 MB RAM, Boost, Dashboard, 9 Designs, KI-Seitenleiste und Werbeblocker." />
+<meta property="og:title" content="Flow Browser" />
+<meta property="og:description" content="Work hard. Play fast. Der schlanke Browser für Windows 11." />
+<meta property="og:image" content="assets/flow-app.png" />
+<link rel="icon" href="assets/favicon.png" />
+<style>
+  :root {
+    --paper: #f3efe6;
+    --paper-2: #ebe6da;
+    --card: #f8f5ee;
+    --ink: #141414;
+    --text-2: #4a463e;
+    --text-3: #8a8478;
+    --line: rgba(20, 20, 20, 0.14);
+    --font: 'Segoe UI Variable Text', 'Segoe UI', Inter, system-ui, -apple-system, sans-serif;
+    --display: 'Segoe UI Variable Display', 'Segoe UI', Inter, system-ui, -apple-system, sans-serif;
+    --mono: 'Cascadia Mono', Consolas, 'SFMono-Regular', Menlo, monospace;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']) {
+      --paper: #121212;
+      --paper-2: #0c0c0c;
+      --card: #1b1b1b;
+      --ink: #efebe2;
+      --text-2: #b9b4a8;
+      --text-3: #7d786e;
+      --line: rgba(239, 235, 226, 0.14);
+      color-scheme: dark;
+    }
+    :root:not([data-theme='light']) .mark { filter: invert(1); }
+  }
+  :root[data-theme='dark'] {
+    --paper: #121212; --paper-2: #0c0c0c; --card: #1b1b1b; --ink: #efebe2;
+    --text-2: #b9b4a8; --text-3: #7d786e; --line: rgba(239, 235, 226, 0.14);
+    color-scheme: dark;
+  }
+  :root[data-theme='dark'] .mark { filter: invert(1); }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 16px/1.6 var(--font);
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  .wrap { width: min(1120px, 100% - 32px); margin: 0 auto; }
+  .caps { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* Navigation */
+  nav.top {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--paper-2) 92%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--ink);
+  }
+  nav.top .wrap { display: flex; align-items: center; gap: 20px; height: 56px; }
+  .brand { display: flex; align-items: center; gap: 8px; text-decoration: none; font: 800 17px/1 var(--display); letter-spacing: 0.04em; }
+  .brand img { width: 24px; height: 24px; }
+  nav.top .links { display: flex; gap: 18px; margin-left: auto; }
+  nav.top .links a { text-decoration: none; color: var(--text-2); }
+  nav.top .links a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    height: 48px; padding: 0 22px;
+    border-radius: 8px; border: 0;
+    background: var(--ink); color: var(--paper);
+    font: 700 15px/1 var(--font); text-decoration: none; cursor: pointer;
+    transition: transform 150ms ease, box-shadow 150ms ease;
+  }
+  .btn:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--text-3); }
+  .btn:active { transform: none; box-shadow: none; }
+  .btn.ghost { background: var(--card); color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
+  .btn.ghost:hover { box-shadow: inset 0 0 0 1.5px var(--ink), 4px 4px 0 var(--ink); }
+  .btn.small { height: 36px; padding: 0 14px; font-size: 13px; }
+  .btn svg { width: 18px; height: 18px; }
+  @media (max-width: 720px) { nav.top .links { display: none; } nav.top .btn { margin-left: auto; } }
+
+  /* Hero */
+  .hero { padding: 72px 0 48px; }
+  .hero .wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
+  .hero h1 { margin: 0; font: 800 clamp(64px, 11vw, 124px)/0.9 var(--display); letter-spacing: -0.01em; }
+  .hero .tag { margin: 14px 0 0; font-size: 15px; letter-spacing: 0.1em; }
+  .hero p.lead { margin: 26px 0 0; max-width: 48ch; font-size: 18px; color: var(--text-2); }
+  .hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .hero .meta { margin-top: 14px; color: var(--text-3); font-size: 12px; }
+  @media (max-width: 900px) { .hero .wrap { grid-template-columns: 1fr; } }
+
+  /* Fenster-Mock */
+  .window {
+    border-radius: 12px; overflow: hidden;
+    background: var(--paper);
+    box-shadow: inset 0 0 0 1.5px var(--ink), 6px 6px 0 var(--ink);
+    font-size: 11px;
+  }
+  .w-top { display: flex; align-items: flex-end; gap: 6px; height: 32px; padding: 0 10px; background: var(--paper-2); border-bottom: 1.5px solid var(--ink); }
+  .w-top .dots { align-self: center; display: flex; gap: 5px; margin-right: 6px; }
+  .w-top .dots i { width: 8px; height: 8px; border-radius: 50%; background: var(--text-3); }
+  .w-tab { height: 24px; margin-bottom: -1.5px; padding: 4px 12px; border-radius: 6px 6px 0 0; box-shadow: inset 1px 0 0 var(--line), inset -1px 0 0 var(--line), inset 0 1px 0 var(--line); color: var(--text-2); white-space: nowrap; }
+  .w-tab.on { background: var(--card); color: var(--ink); font-weight: 600; box-shadow: inset 1.5px 0 0 var(--ink), inset -1.5px 0 0 var(--ink), inset 0 1.5px 0 var(--ink); }
+  .w-stat { margin-left: auto; align-self: center; font-family: var(--mono); font-size: 9.5px; color: var(--text-2); white-space: nowrap; }
+  .w-bar { display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 10px; background: var(--card); border-bottom: 1.5px solid var(--ink); }
+  .w-url { flex: 1; height: 22px; display: flex; align-items: center; padding: 0 8px; border-radius: 4px; box-shadow: inset 0 0 0 1px var(--line); font-family: var(--mono); font-size: 10px; }
+  .w-boost { height: 22px; padding: 0 9px; display: grid; place-items: center; border-radius: 4px; background: var(--ink); color: var(--paper); font: 700 9px/1 var(--mono); letter-spacing: 0.06em; }
+  .w-body { display: grid; grid-template-columns: 1.3fr 1fr; gap: 18px; padding: 22px 20px 24px; }
+  .w-body h4 { margin: 0; font: 800 34px/0.9 var(--display); }
+  .w-body .t { margin: 5px 0 14px; font-family: var(--mono); font-size: 8px; letter-spacing: 0.1em; }
+  .w-search { height: 22px; border-radius: 5px; box-shadow: inset 0 0 0 1.5px var(--ink), 2px 2px 0 var(--ink); margin-bottom: 14px; display: flex; align-items: center; padding: 0 8px; font-family: var(--mono); font-size: 8.5px; color: var(--text-3); }
+  .w-tiles { display: grid; grid-template-columns: repeat(6, 1fr); gap: 5px; }
+  .w-tiles span { aspect-ratio: 1; border-radius: 4px; background: var(--ink); }
+  .w-clock { font: 400 38px/1 var(--mono); letter-spacing: -0.04em; }
+  .w-side .lbl { margin: 14px 0 6px; font: 700 8px/1 var(--mono); letter-spacing: 0.08em; }
+  .w-slider { position: relative; height: 2px; background: var(--line); margin: 10px 0; }
+  .w-slider::before { content: ''; position: absolute; inset: 0 30% 0 0; background: var(--ink); }
+  .w-slider::after { content: ''; position: absolute; left: 70%; top: -4px; width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; background: var(--card); box-shadow: inset 0 0 0 1.5px var(--ink); }
+  .w-task { height: 14px; border-bottom: 1px solid var(--line); }
+
+  /* Kennzahlen */
+  .stats { border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); background: var(--card); }
+  .stats .wrap { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .stat { padding: 26px 20px; border-left: 1px solid var(--line); }
+  .stat:first-child { border-left: 0; }
+  .stat b { display: block; font: 800 34px/1 var(--display); }
+  .stat span { display: block; margin-top: 8px; color: var(--text-2); font-size: 14px; }
+  @media (max-width: 720px) { .stats .wrap { grid-template-columns: 1fr 1fr; } .stat:nth-child(3) { border-left: 0; } .stat { border-top: 1px solid var(--line); } }
+
+  section { padding: 80px 0 0; }
+  h2 { margin: 0 0 8px; font: 800 clamp(32px, 5vw, 48px)/1.05 var(--display); }
+  .sub { margin: 0 0 36px; color: var(--text-2); max-width: 60ch; }
+
+  /* Funktionen */
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  @media (max-width: 900px) { .grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+  .card { padding: 22px; border-radius: 10px; background: var(--card); box-shadow: inset 0 0 0 1px var(--line); transition: box-shadow 150ms ease, transform 150ms ease; }
+  .card:hover { transform: translate(-2px, -2px); box-shadow: inset 0 0 0 1.5px var(--ink), 4px 4px 0 var(--ink); }
+  .card .ico { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 8px; background: var(--ink); color: var(--paper); margin-bottom: 14px; }
+  .card .ico svg { width: 20px; height: 20px; }
+  .card h3 { margin: 0 0 6px; font: 700 17px/1.3 var(--display); }
+  .card p { margin: 0; color: var(--text-2); font-size: 14.5px; }
+
+  /* Designs */
+  .designs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  @media (max-width: 900px) { .designs { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .designs { grid-template-columns: 1fr; } }
+  .ed figure { margin: 0; }
+  .ed .pv { height: 150px; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; background: var(--bg); box-shadow: inset 0 0 0 1px rgba(0,0,0,.15); color: var(--fg); }
+  .ed .pv .bar { height: 20px; display: flex; align-items: center; gap: 4px; padding: 0 8px; background: var(--chrome); border-bottom: 1px solid var(--edge); }
+  .ed .pv .bar i { width: 5px; height: 5px; border-radius: 50%; background: var(--chrome-fg); opacity: .5; }
+  .ed .pv .bar b { margin-left: auto; width: 28px; height: 9px; border-radius: 2px; background: var(--acc); }
+  .ed .pv .in { flex: 1; display: flex; justify-content: space-between; padding: 14px; }
+  .ed .pv .l { display: flex; flex-direction: column; gap: 7px; }
+  .ed .pv .l strong { font: 800 20px/1 var(--display); }
+  .ed .pv .s { width: 120px; height: 11px; border-radius: 3px; box-shadow: inset 0 0 0 1.2px var(--fg); }
+  .ed .pv .tl { display: grid; grid-template-columns: repeat(6, 13px); gap: 4px; }
+  .ed .pv .tl span { height: 13px; border-radius: 3px; background: var(--tile); box-shadow: inset 0 0 0 1px var(--tedge, transparent); }
+  .ed .pv .c { font: 400 22px/1 var(--mono); }
+  .ed figcaption { margin-top: 10px; display: flex; gap: 8px; align-items: baseline; }
+  .ed figcaption b { font-size: 15px; }
+  .ed figcaption span { color: var(--text-3); font-size: 13px; }
+
+  /* Download */
+  .dl { margin-top: 80px; padding: 56px 0 64px; background: var(--ink); color: var(--paper); }
+  .dl .wrap { display: grid; grid-template-columns: auto 1fr auto; gap: 32px; align-items: center; }
+  .dl img { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 0 0 1.5px rgba(255,255,255,.25); }
+  .dl h2 { color: var(--paper); margin: 0; }
+  .dl p { margin: 6px 0 0; opacity: .75; }
+  .dl .btn { background: var(--paper); color: var(--ink); }
+  .dl .btn:hover { box-shadow: 4px 4px 0 rgba(255,255,255,.35); }
+  .dl .ver { display: block; margin-top: 10px; font-family: var(--mono); font-size: 12px; opacity: .65; text-align: right; }
+  @media (max-width: 760px) { .dl .wrap { grid-template-columns: 1fr; text-align: left; } .dl .ver { text-align: left; } }
+
+  /* FAQ */
+  details { border-bottom: 1px solid var(--line); padding: 16px 0; }
+  details summary { cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  details summary::after { content: '+'; font-family: var(--mono); }
+  details[open] summary::after { content: '–'; }
+  details p { margin: 10px 0 0; color: var(--text-2); }
+  code { font-family: var(--mono); font-size: .92em; padding: 1px 5px; border-radius: 4px; box-shadow: inset 0 0 0 1px var(--line); }
+
+  footer { margin-top: 80px; padding: 28px 0 40px; border-top: 1px solid var(--ink); color: var(--text-3); font-size: 14px; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; }
+</style>
+</head>
+<body>
+  <nav class="top">
+    <div class="wrap">
+      <a class="brand" href="#"><img class="mark" src="assets/flow-mark.png" alt="" />FLOW</a>
+      <div class="links">
+        <a href="#funktionen">Funktionen</a>
+        <a href="#designs">Designs</a>
+        <a href="#faq">FAQ</a>
+        <a class="repo-link" href="#">GitHub</a>
+      </div>
+      <a class="btn small dl-link" href="#download">Download</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <div>
+        <h1>FLOW</h1>
+        <p class="tag caps">Work hard. Play fast.</p>
+        <p class="lead">
+          Der schlanke Browser für Gaming und Büro unter Windows&nbsp;11. Wenig RAM,
+          ein Dashboard mit Live-Werten, Boost auf Knopfdruck – und neun Designs, die zu dir passen.
+        </p>
+        <div class="cta">
+          <a class="btn dl-link" href="#download">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
+            Für Windows herunterladen
+          </a>
+          <a class="btn ghost" href="#funktionen">Mehr erfahren</a>
+        </div>
+        <p class="meta caps"><span class="ver-text">Windows 10/11 · 64 Bit</span> · kostenlos</p>
+      </div>
+
+      <div class="window" aria-hidden="true">
+        <div class="w-top">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span class="w-tab on">Flow | Dashboard</span><span class="w-tab">GitHub</span><span class="w-tab">Discord</span>
+          <span class="w-stat">RAM: 98 MB | HZ: 144 | PING: 7ms</span>
+        </div>
+        <div class="w-bar"><span class="w-url">flow://dashboard</span><span class="w-boost">BOOST</span></div>
+        <div class="w-body">
+          <div>
+            <h4>FLOW</h4>
+            <div class="t">WORK HARD. PLAY FAST.</div>
+            <div class="w-search">Search or enter web address…</div>
+            <div class="w-tiles"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
+          <div class="w-side">
+            <div class="w-clock">11:58</div>
+            <div class="lbl">RESOURCE CONTROL</div>
+            <div class="w-slider"></div>
+            <div class="w-slider"></div>
+            <div class="lbl">TASKS // NOTES</div>
+            <div class="w-task"></div><div class="w-task"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="stats">
+    <div class="wrap">
+      <div class="stat"><b>~100 MB</b><span>RAM im Leerlauf – ein Bruchteil gängiger Browser</span></div>
+      <div class="stat"><b>9</b><span>Designs von Classic bis Neon</span></div>
+      <div class="stat"><b>1 Klick</b><span>Boost: Hintergrund-Tabs schlafen, RAM wird frei</span></div>
+      <div class="stat"><b>0</b><span>Tracker – Werbeblocker ist eingebaut</span></div>
+    </div>
+  </div>
+
+  <section id="funktionen">
+    <div class="wrap">
+      <h2>Alles drin. Nichts zu viel.</h2>
+      <p class="sub">Flow nutzt die Chromium-Engine, die schon in Windows steckt – deshalb ist die Installation klein und Webseiten laufen wie gewohnt.</p>
+      <div class="grid">
+        <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></svg></div><h3>Boost & Ressourcen-Regler</h3><p>Ein Klick legt Hintergrund-Tabs schlafen und gibt Speicher frei. CPU- und RAM-Limit stellst du direkt im Dashboard ein.</p></div>
+        <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 13h3M8 16h6"/></svg></div><h3>Dashboard</h3><p>Uhr, Suche, eigene Schnellzugriffe, Aufgabenliste und Live-Werte für RAM, Bildwiederholrate und Ping.</p></div>
+        <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 12h4m-2-2v4M15 11h.01M18 13h.01"/><rect x="2" y="6" width="20" height="12" rx="5"/></svg></div><h3>Gaming-freundlich</h3><p>Läuft ein Spiel im Vollbild, tritt Flow automatisch zurück: Tabs schlafen, CPU-Priorität sinkt.</p></div>
+        <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M6 6l2 2m8 8 2 2M6 18l2-2m8-8 2-2"/></svg></div><h3>KI-Seitenleiste</h3><p>Claude, ChatGPT, Gemini oder Perplexity direkt neben jeder Seite. Text markieren, Rechtsklick, zusammenfassen lassen.</p></div>
+        <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5"/></svg></div><h3>Peek</h3><p>Links mit Umschalt+Klick als schwebende Vorschau öffnen – ohne die aktuelle Seite zu verlassen.</p></div>
+        <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/></svg></div><h3>Werbe- & Tracker-Blocker</h3><p>EasyList und EasyPrivacy sind eingebaut. Pro Seite mit einem Klick abschaltbar.</p></div>
+        <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M12 4v16"/></svg></div><h3>Geteilte Ansicht</h3><p>Zwei Seiten nebeneinander – etwa Guide und Spiel-Wiki oder Mail und Dokument.</p></div>
+        <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 4h10l4 4v12H5z"/><path d="M9 12h6M9 16h4"/></svg></div><h3>Tab-Notizen</h3><p>Notizen und Erinnerungen direkt an einer Seite – mit Windows-Benachrichtigung zur richtigen Zeit.</p></div>
+        <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3M18 3v4h-4M6 21v-4h4"/></svg></div><h3>Tab-Schlaf</h3><p>Unbenutzte Tabs schlafen nach einer einstellbaren Zeit und wachen beim Anklicken wieder auf.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="designs">
+    <div class="wrap">
+      <h2>Neun Designs. Deine Farbe.</h2>
+      <p class="sub">Wähle eine Special Edition, eine eigene Akzentfarbe und wie durchsichtig der Hintergrund sein soll.</p>
+      <div class="designs" id="design-grid"></div>
+    </div>
+  </section>
+
+  <div class="dl" id="download">
+    <div class="wrap">
+      <img src="assets/flow-app.png" alt="" />
+      <div>
+        <h2>Flow herunterladen</h2>
+        <p>Installer für Windows 10/11 (64 Bit). Keine Administratorrechte nötig.</p>
+      </div>
+      <div>
+        <a class="btn dl-link" id="dl-main" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
+          Download
+        </a>
+        <span class="ver" id="dl-ver">neueste Version</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2>Fragen</h2>
+      <details><summary>Windows zeigt „Der Computer wurde durch Windows geschützt“ – ist das normal?</summary><p>Ja. Flow ist (noch) nicht mit einem kostenpflichtigen Zertifikat signiert, deshalb warnt SmartScreen bei neuen Programmen. Klicke auf <b>Weitere Informationen</b> und dann <b>Trotzdem ausführen</b>.</p></details>
+      <details><summary>Brauche ich etwas zusätzlich?</summary><p>Nein. Flow nutzt die WebView2-Runtime, die in Windows 11 enthalten ist. Unter Windows 10 installiert der Installer sie bei Bedarf automatisch.</p></details>
+      <details><summary>Werden meine Daten irgendwohin gesendet?</summary><p>Nein. Verlauf, Lesezeichen, Notizen und Einstellungen bleiben auf deinem PC. Netzwerkzugriffe gibt es nur zu den Seiten, die du besuchst, zu den Filterlisten des Werbeblockers, zum Ping-Ziel (abschaltbar) und zur KI, die du selbst auswählst.</p></details>
+      <details><summary>Kann ich Flow als Standardbrowser festlegen?</summary><p>Ja, unter Einstellungen › System. Links aus anderen Apps öffnen sich dann in Flow.</p></details>
+      <details><summary>Wie deinstalliere ich Flow?</summary><p>Über Windows-Einstellungen › Apps › Installierte Apps › Flow › Deinstallieren.</p></details>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <span>© <span id="year"></span> Flow Browser</span>
+      <span><a class="repo-link" href="#">Quellcode auf GitHub</a> · <a class="rel-link" href="#">Alle Versionen</a></span>
+    </div>
+  </footer>
+
+<script>
+  // ---- Einstellung: GitHub-Repository (für die Links „GitHub“ / „Alle Versionen“) ----
+  const REPO = 'MrZock/flow-browser';
+  // -------------------------------------------------------------------------------------
+
+  const repoUrl = `https://github.com/${REPO}`;
+  document.querySelectorAll('.repo-link').forEach((a) => (a.href = repoUrl));
+  document.querySelectorAll('.rel-link').forEach((a) => (a.href = `${repoUrl}/tree/main/download`));
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Download: der Installer liegt auf dieser Seite unter download/ (latest.json
+  // nennt Datei, Version und Größe; erzeugt von scripts/publish_site.py).
+  const main = document.getElementById('dl-main');
+  main.href = 'download/Flow-Setup.exe';
+  fetch('download/latest.json', { cache: 'no-store' })
+    .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+    .then((d) => {
+      main.href = `download/${d.file}`;
+      main.setAttribute('download', d.file);
+      const mb = (d.size / 1048576).toFixed(1).replace('.', ',');
+      document.getElementById('dl-ver').textContent = `Version ${d.version} · ${mb} MB`;
+      document.querySelector('.ver-text').textContent = `Version ${d.version} · Windows 10/11 · 64 Bit`;
+    })
+    .catch(() => {});
+
+  // Design-Galerie (Farben wie in Flow, scripts/gen_tokens.py)
+  const EDITIONS = [
+    ['Classic Light', 'Zeitlos & klar', { bg: '#f3efe6', chrome: '#ebe6da', fg: '#141414', chromeFg: '#141414', tile: '#1b1b1b', acc: '#141414', edge: 'rgba(20,20,20,.15)' }],
+    ['Dark Mode', 'Fokus & Kontrast', { bg: '#121212', chrome: '#0c0c0c', fg: '#efebe2', chromeFg: '#efebe2', tile: '#2a2a2a', acc: '#efebe2', edge: 'rgba(239,235,226,.15)', tedge: 'rgba(239,235,226,.2)' }],
+    ['Sepia Original', 'Retro & warm', { bg: '#f3e5d0', chrome: '#e9d6ba', fg: '#3b2a1e', chromeFg: '#3b2a1e', tile: '#4a3326', acc: '#4a3326', edge: 'rgba(59,42,30,.18)' }],
+    ['Glass Effect', 'Transparent & modern', { bg: 'radial-gradient(60% 80% at 75% 25%, #fff, transparent 70%), linear-gradient(135deg, #d9dde3, #b8bec8 60%, #e8eaee)', chrome: 'rgba(255,255,255,.5)', fg: '#23272e', chromeFg: '#23272e', tile: 'rgba(255,255,255,.6)', acc: '#23272e', edge: 'rgba(255,255,255,.7)', tedge: 'rgba(255,255,255,.9)' }],
+    ['Neon Accent', 'Energisch & kräftig', { bg: 'radial-gradient(60% 60% at 90% 0%, rgba(168,85,247,.3), transparent 70%), #120c22', chrome: '#0c0818', fg: '#f1ecff', chromeFg: '#f1ecff', tile: '#1c1236', acc: '#a855f7', edge: 'rgba(168,85,247,.4)', tedge: '#a855f7' }],
+    ['Nordic', 'Ruhig & luftig', { bg: 'linear-gradient(180deg, #eef2f7, #dfe6ef)', chrome: '#dde4ee', fg: '#2c3a4d', chromeFg: '#2c3a4d', tile: '#dfe6ef', acc: '#2c3a4d', edge: 'rgba(44,58,77,.15)', tedge: 'rgba(44,58,77,.25)' }],
+    ['Forest', 'Naturverbunden', { bg: 'linear-gradient(180deg, #2a3d30, #172219)', chrome: '#172219', fg: '#e4ecdf', chromeFg: '#e4ecdf', tile: 'rgba(228,236,223,.1)', acc: '#c9d8c0', edge: 'rgba(228,236,223,.15)', tedge: 'rgba(228,236,223,.25)' }],
+    ['High Contrast', 'Maximale Klarheit', { bg: '#ffffff', chrome: '#000000', fg: '#000000', chromeFg: '#ffffff', tile: '#000000', acc: '#ffffff', edge: '#000000' }],
+    ['Sunset', 'Warm & lebendig', { bg: 'linear-gradient(180deg, #f8d3a8, #f2a883 45%, #d98a8c 72%, #a86b8e)', chrome: 'rgba(241,196,166,.9)', fg: '#3a1f1d', chromeFg: '#3a1f1d', tile: '#3a1f1d', acc: '#3a1f1d', edge: 'rgba(58,31,29,.2)' }],
+  ];
+  const grid = document.getElementById('design-grid');
+  for (const [name, blurb, c] of EDITIONS) {
+    const el = document.createElement('div');
+    el.className = 'ed';
+    el.style.cssText = `--bg:${c.bg};--chrome:${c.chrome};--fg:${c.fg};--chrome-fg:${c.chromeFg};--tile:${c.tile};--acc:${c.acc};--edge:${c.edge};--tedge:${c.tedge || 'transparent'}`;
+    el.innerHTML = `<figure><div class="pv" aria-hidden="true"><div class="bar"><i></i><i></i><i></i><b></b></div>
+      <div class="in"><div class="l"><strong>FLOW</strong><span class="s"></span><span class="tl">${'<span></span>'.repeat(6)}</span><span class="tl">${'<span></span>'.repeat(4)}</span></div><span class="c">11:58</span></div></div>
+      <figcaption><b></b><span></span></figcaption></figure>`;
+    el.querySelector('figcaption b').textContent = name;
+    el.querySelector('figcaption span').textContent = blurb;
+    grid.appendChild(el);
+  }
+</script>
+</body>
+</html>
