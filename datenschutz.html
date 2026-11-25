@@ -4,103 +4,204 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Datenschutz – Fusion Browser</title>
-<meta name="robots" content="noindex" />
 <link rel="icon" href="assets/favicon.png" />
 <link rel="stylesheet" href="legal.css" />
 </head>
 <body>
-<main class="legal">
-  <p><a href="./">← Zurück zu Fusion</a></p>
+<nav class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img class="mark" src="assets/fusion-mark.png" alt="" />FUSION</a>
+    <div class="links">
+      <a href="./">Start</a>
+      <a href="kontakt.html">Impressum</a>
+      <a href="datenschutz.html" aria-current="page">Datenschutz</a>
+      <a href="licenses.html">Lizenzen</a>
+    </div>
+  </div>
+</nav>
+
+<main class="legal wrap">
+  <p class="eyebrow">Rechtliches · Stand: 25. November 2026</p>
   <h1>Datenschutzerklärung</h1>
-
-  <p class="note">
-    Kurz gesagt: Diese Webseite setzt keine Cookies, nutzt kein Tracking und keine Analyse-Dienste.
-    Der Fusion-Browser sendet keine Nutzungsdaten an mich – Verlauf, Lesezeichen, Notizen und
-    Passwörter bleiben auf deinem PC.
+  <p class="lead">
+    Deine Daten gehören dir. Diese Webseite setzt keine Cookies und nutzt kein Tracking. Der Fusion
+    Browser speichert alles lokal auf deinem PC und sendet keine Nutzungsdaten an mich.
   </p>
 
-  <h2>1. Verantwortlicher</h2>
-  <p>
-    Alexander Posaschenikow (privates, nicht kommerzielles Projekt)<br />
-    E-Mail: <a href="mailto:alex.posaschenikow2008@gmail.com">alex.posaschenikow2008@gmail.com</a>
-  </p>
+  <div class="note">
+    <b>Kurzfassung:</b> Keine Cookies · kein Tracking · keine Werbung · keine Telemetrie.
+    Verlauf, Lesezeichen, Notizen und Passwörter verlassen deinen PC nicht.
+  </div>
 
-  <h2>2. Diese Webseite</h2>
-  <h3>Hosting durch GitHub Pages</h3>
-  <p>
-    Die Webseite und die Downloads werden über GitHub Pages bereitgestellt (GitHub, Inc., 88 Colin P.
-    Kelly Jr. Street, San Francisco, CA 94107, USA; ein Unternehmen der Microsoft Corporation). Beim
-    Aufruf verarbeitet GitHub technisch notwendige Daten, insbesondere deine IP-Adresse, Datum und
-    Uhrzeit, die abgerufene Datei und Browser-Informationen (Server-Logfiles), um die Seite
-    auszuliefern und die Sicherheit zu gewährleisten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO
-    (berechtigtes Interesse an einer sicheren und zuverlässigen Bereitstellung). Eine Übermittlung in
-    die USA ist möglich; GitHub ist unter dem EU-US Data Privacy Framework zertifiziert. Details:
-    <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">Datenschutzerklärung von GitHub</a>.
-  </p>
-  <h3>Keine Cookies, kein Tracking</h3>
-  <p>
-    Diese Seite setzt keine Cookies, lädt keine externen Schriften oder Skripte von Drittanbietern und
-    verwendet keine Analyse- oder Werbedienste. Die Seite fragt lediglich bei GitHub die Datei mit der
-    aktuellen Versionsnummer ab (gleicher Server).
-  </p>
+  <nav class="toc" aria-label="Inhalt">
+    <ol>
+      <li><a href="#verantwortlich">Verantwortlicher</a></li>
+      <li><a href="#webseite">Diese Webseite</a></li>
+      <li><a href="#lokal">Daten im Browser</a></li>
+      <li><a href="#verbindungen">Verbindungen des Browsers</a></li>
+      <li><a href="#ki">KI-Seitenleiste</a></li>
+      <li><a href="#kontakt">Kontakt per E-Mail</a></li>
+      <li><a href="#dauer">Speicherdauer</a></li>
+      <li><a href="#sicherheit">Sicherheit</a></li>
+      <li><a href="#rechte">Deine Rechte</a></li>
+      <li><a href="#weiteres">Weitere Angaben</a></li>
+      <li><a href="#aenderungen">Änderungen</a></li>
+    </ol>
+  </nav>
 
-  <h2>3. Der Fusion-Browser</h2>
-  <h3>Lokal gespeicherte Daten</h3>
+  <h2 id="verantwortlich"><span class="n">01</span>Verantwortlicher</h2>
+  <div class="card">
+    <dl class="facts">
+      <dt>Name</dt>
+      <dd>Alexander Posaschenikow (privates, nicht kommerzielles Projekt)</dd>
+      <dt>E-Mail</dt>
+      <dd><a href="mailto:alex.posaschenikow2008@gmail.com">alex.posaschenikow2008@gmail.com</a></dd>
+    </dl>
+  </div>
+
+  <h2 id="webseite"><span class="n">02</span>Diese Webseite</h2>
+  <h3>Hosting bei GitHub Pages</h3>
   <p>
-    Verlauf, Lesezeichen, Notizen, Einstellungen, Sitzung und Downloads-Liste speichert Fusion nur auf
-    deinem PC (im Benutzerordner). Gespeicherte Passwörter werden zusätzlich mit Windows (DPAPI)
-    verschlüsselt und sind nur unter deinem Windows-Konto lesbar. Ich erhalte keine dieser Daten.
+    Webseite und Downloads werden über GitHub Pages bereitgestellt (GitHub, Inc., 88 Colin P. Kelly Jr.
+    Street, San Francisco, CA 94107, USA – ein Unternehmen der Microsoft Corporation). Beim Aufruf
+    verarbeitet GitHub technisch notwendige Daten:
   </p>
-  <h3>Verbindungen, die Fusion selbst herstellt</h3>
   <ul>
-    <li>
-      <b>Webseiten, die du aufrufst</b> – wie jeder Browser. Es gelten die Datenschutzerklärungen der
-      jeweiligen Seiten, auch der von dir gewählten Suchmaschine.
-    </li>
-    <li>
-      <b>Update-Prüfung</b> – beim Start fragt Fusion die Datei mit der neuesten Version von
-      GitHub Pages ab (siehe Abschnitt 2). Dabei wird keine Kennung übertragen. Abschaltbar unter
-      Einstellungen › System.
-    </li>
-    <li>
-      <b>Filterlisten des Werbeblockers</b> – Fusion lädt etwa einmal pro Woche die Listen EasyList und
-      EasyPrivacy von easylist.to.
-    </li>
-    <li>
-      <b>Ping-Anzeige</b> – alle 10 Sekunden ein kurzer Verbindungsaufbau zu einem DNS-Server
-      (Standard: Cloudflare 1.1.1.1, wahlweise Google 8.8.8.8), ohne Datenübertragung. Abschaltbar
-      unter Einstellungen › Dashboard.
-    </li>
-    <li>
-      <b>Symbole im Schnellzugriff</b> – die Symbole (favicon) der eingetragenen Seiten werden direkt
-      von diesen Seiten geladen.
-    </li>
-    <li>
-      <b>KI-Seitenleiste</b> – nur wenn du sie öffnest, lädt Fusion die Webseite der von dir gewählten
-      KI (z. B. Claude, ChatGPT, Gemini). Texte, die du dorthin sendest, verarbeitet der jeweilige
-      Anbieter nach seiner Datenschutzerklärung.
-    </li>
+    <li>IP-Adresse, Datum und Uhrzeit des Abrufs</li>
+    <li>abgerufene Datei bzw. Seite und übertragene Datenmenge</li>
+    <li>Browser- und Betriebssystemangaben (User-Agent), ggf. Referrer</li>
   </ul>
   <p>
-    Fusion enthält keine Telemetrie, keine Absturzberichte an Dritte und keine Werbung.
+    Zweck ist die sichere und zuverlässige Auslieferung der Seite und der Downloads. Rechtsgrundlage ist
+    Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse). Eine Übermittlung in die USA ist möglich; GitHub
+    ist unter dem EU-US Data Privacy Framework zertifiziert. Auf Speicherdauer und Umfang dieser
+    Server-Protokolle habe ich keinen Einfluss. Details:
+    <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">Datenschutzerklärung von GitHub</a>.
   </p>
-
-  <h2>4. Deine Rechte</h2>
+  <h3>Keine Cookies, keine Drittanbieter</h3>
   <p>
-    Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17),
-    Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch
-    (Art. 21). Wende dich dazu an die oben genannte E-Mail-Adresse. Außerdem kannst du dich bei einer
-    Datenschutz-Aufsichtsbehörde beschweren, z. B. der Behörde deines Bundeslandes.
+    Diese Seite setzt keine Cookies, verwendet keine Analyse- oder Werbedienste und lädt keine Schriften,
+    Skripte oder Bilder von fremden Servern. Ein Cookie-Banner ist deshalb nicht nötig.
+  </p>
+
+  <h2 id="lokal"><span class="n">03</span>Daten im Fusion Browser</h2>
+  <p>Alles, was Fusion speichert, bleibt auf deinem PC (Benutzerordner unter Windows):</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Daten</th><th>Wo</th><th>Hinweis</th></tr></thead>
+      <tbody>
+        <tr><td><b>Verlauf, Lesezeichen, Notizen</b></td><td>lokal (Datenbank)</td><td>Verlauf abschaltbar und löschbar (Einstellungen › Privatsphäre)</td></tr>
+        <tr><td><b>Passwörter</b></td><td>lokal</td><td>verschlüsselt mit Windows (DPAPI), nur unter deinem Windows-Konto lesbar; Anzeigen erst nach Windows Hello</td></tr>
+        <tr><td><b>Cookies &amp; Anmeldungen</b></td><td>lokal (Browser-Profil)</td><td>wie in jedem Browser, von den besuchten Seiten gesetzt</td></tr>
+        <tr><td><b>Einstellungen, Sitzung, Dashboard</b></td><td>lokal</td><td>—</td></tr>
+        <tr><td><b>Backups</b></td><td>wo du sie speicherst</td><td>Passwörter darin nur mit deinem Backup-Passwort verschlüsselt</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Ich erhalte keine dieser Daten. Fusion enthält keine Telemetrie, keine Absturzberichte an Dritte und keine Werbung.</p>
+  <p>
+    <b>Wichtig zur Verantwortlichkeit:</b> Fusion ist eine Software, die ausschließlich auf deinem Gerät
+    läuft. Die oben genannten Daten werden dort von dir selbst bzw. durch die Software in deinem Auftrag
+    verarbeitet und nicht an mich übermittelt. Ich habe darauf keinen Zugriff und bin für diese lokale
+    Verarbeitung nicht Verantwortlicher im Sinne der DSGVO. Löschen kannst du diese Daten jederzeit in den
+    Einstellungen von Fusion oder durch Deinstallieren (mit der Option „App-Daten löschen“).
+  </p>
+
+  <h2 id="verbindungen"><span class="n">04</span>Verbindungen, die Fusion selbst herstellt</h2>
+  <p>Neben den Webseiten, die du aufrufst, baut Fusion nur diese Verbindungen auf:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Wohin</th><th>Wann &amp; wozu</th><th>Abschaltbar</th></tr></thead>
+      <tbody>
+        <tr><td><b>GitHub Pages</b> (mrzock.github.io)</td><td>kurz nach dem Start: Abfrage der Datei mit der neuesten Version; beim Aktualisieren: Download des Updates. Es wird keine Kennung übertragen.</td><td>ja (Einstellungen › System)</td></tr>
+        <tr><td><b>easylist.to</b></td><td>etwa wöchentlich: Filterlisten des Werbe- und Tracker-Blockers</td><td>ja (Blocker aus)</td></tr>
+        <tr><td><b>Cloudflare 1.1.1.1</b> bzw. Google 8.8.8.8</td><td>alle 10 s ein kurzer Verbindungsaufbau für die Ping-Anzeige, ohne Datenübertragung</td><td>ja (Einstellungen › Dashboard)</td></tr>
+        <tr><td><b>Seiten im Schnellzugriff</b></td><td>Laden der Seitensymbole (favicon) auf dem Dashboard</td><td>Kacheln entfernen</td></tr>
+        <tr><td><b>Gewählte Suchmaschine</b></td><td>nur wenn du in der Adressleiste suchst</td><td>Suchmaschine wählbar</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Bei diesen Verbindungen erhält der jeweilige Server – wie bei jedem Internetabruf – technisch deine
+    IP-Adresse. Ich selbst erhalte keine Daten daraus; einzige Ausnahme ist die Update-Abfrage, die über
+    GitHub Pages läuft (siehe Abschnitt 02, ich bekomme keine Protokolle zu sehen). Rechtsgrundlage für
+    die Update-Prüfung ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an sicherer, aktueller
+    Software); alle übrigen Verbindungen löst du selbst durch die Nutzung der jeweiligen Funktion aus
+    und kannst sie abschalten.
   </p>
   <p>
-    Da ich selbst keine personenbezogenen Daten über die Nutzung von Fusion erhalte, betreffen solche
-    Anfragen in der Regel nur E-Mails, die du mir schickst.
+    Für alle Webseiten, die du besuchst, gelten deren eigene Datenschutzerklärungen – wie bei jedem
+    Browser. Für deren Inhalte und Datenverarbeitung bin ich nicht verantwortlich.
   </p>
 
-  <h2>5. Änderungen</h2>
-  <p>Diese Erklärung wird angepasst, wenn sich Fusion oder die Webseite ändern. Stand: 25. November 2026</p>
+  <h2 id="ki"><span class="n">05</span>KI-Seitenleiste</h2>
+  <p>
+    Nur wenn du die KI-Seitenleiste öffnest, lädt Fusion die Webseite der von dir gewählten KI (z. B.
+    Claude, ChatGPT, Gemini, Perplexity) in einem eigenen Profil. Texte, die du dort eingibst oder über
+    „Mit KI zusammenfassen“ sendest, verarbeitet der jeweilige Anbieter nach seiner Datenschutzerklärung.
+    Fusion selbst speichert diese Texte nicht.
+  </p>
 
-  <p><a href="kontakt.html">Kontakt</a> · <a href="licenses.html">Lizenzen</a></p>
+  <h2 id="kontakt"><span class="n">06</span>Kontakt per E-Mail</h2>
+  <p>
+    Wenn du mir eine E-Mail schreibst, verarbeite ich deine Adresse und den Inhalt nur, um deine Anfrage
+    zu beantworten (Art. 6 Abs. 1 lit. b bzw. f DSGVO). Die Nachricht wird gelöscht, sobald sie erledigt
+    ist und keine Aufbewahrungspflichten bestehen.
+  </p>
+
+  <h2 id="dauer"><span class="n">07</span>Speicherdauer</h2>
+  <ul>
+    <li><b>Server-Protokolle der Webseite:</b> speichert GitHub nach eigenen Regeln; ich habe darauf weder Zugriff noch Einfluss.</li>
+    <li><b>E-Mails:</b> bis die Anfrage erledigt ist; danach werden sie gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.</li>
+    <li><b>Daten im Browser:</b> bleiben auf deinem Gerät, bis du sie löschst (siehe Abschnitt 03).</li>
+  </ul>
+
+  <h2 id="sicherheit"><span class="n">08</span>Sicherheit</h2>
+  <p>
+    Webseite, Downloads und Update-Abfrage werden ausschließlich verschlüsselt über HTTPS übertragen.
+    Updates sind zusätzlich digital signiert; Fusion installiert nur Updates mit gültiger Signatur.
+    Gespeicherte Passwörter sind mit Windows verschlüsselt. Eine absolute Sicherheit kann im Internet
+    jedoch niemand garantieren.
+  </p>
+
+  <h2 id="rechte"><span class="n">09</span>Deine Rechte</h2>
+  <p>Du hast jederzeit das Recht auf</p>
+  <ul>
+    <li>Auskunft über deine gespeicherten Daten (Art. 15 DSGVO),</li>
+    <li>Berichtigung (Art. 16) und Löschung (Art. 17),</li>
+    <li>Einschränkung der Verarbeitung (Art. 18) und Datenübertragbarkeit (Art. 20),</li>
+    <li>Widerspruch gegen Verarbeitungen auf Grundlage berechtigter Interessen (Art. 21).</li>
+  </ul>
+  <p>
+    Eine kurze E-Mail an die oben genannte Adresse genügt. Außerdem kannst du dich bei einer
+    Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel bei der Behörde deines Bundeslandes
+    (Art. 77 DSGVO).
+  </p>
+  <p>
+    Da ich über die Nutzung von Fusion keine personenbezogenen Daten erhalte, betreffen solche Anfragen
+    in der Regel nur E-Mails, die du mir geschickt hast.
+  </p>
+
+  <h2 id="weiteres"><span class="n">10</span>Weitere Angaben</h2>
+  <ul>
+    <li><b>Keine Pflicht:</b> Du musst mir keine personenbezogenen Daten geben. Fusion funktioniert vollständig ohne Konto und ohne Anmeldung.</li>
+    <li><b>Keine automatisierten Entscheidungen:</b> Es findet kein Profiling und keine automatisierte Entscheidungsfindung im Sinne von Art. 22 DSGVO statt.</li>
+    <li><b>Keine Weitergabe:</b> Ich verkaufe oder übermittle keine Daten an Dritte. Empfänger technisch notwendiger Daten ist allein der Hosting-Anbieter GitHub (Abschnitt 02).</li>
+    <li><b>Kinder und Jugendliche:</b> Fusion und diese Seite richten sich nicht gezielt an Kinder. Ich erhebe bewusst keine Daten von Kindern.</li>
+  </ul>
+
+  <h2 id="aenderungen"><span class="n">11</span>Änderungen</h2>
+  <p>
+    Diese Erklärung wird angepasst, wenn sich Fusion oder diese Webseite ändern. Es gilt die jeweils
+    hier veröffentlichte Fassung (Stand oben).
+  </p>
 </main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Fusion Browser · Alexander Posaschenikow</span>
+    <span><a href="kontakt.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="licenses.html">Lizenzen</a></span>
+  </div>
+</footer>
 </body>
 </html>

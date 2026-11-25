@@ -1,7 +1,7 @@
 {
   "version": "0.5.0",
   "notes": "- Neuer Name: aus Flow wird wieder Fusion Browser – alle Daten, Lesezeichen, Passwörter und Anmeldungen bleiben erhalten\n- Automatische Updates: neue Versionen erscheinen direkt auf dem Dashboard\n- Neues Design „Paper & Ink“, 9 Designs + 3 geheime zum Freischalten\n- Passwort-Manager mit Windows-Hello-Schutz\n- Lesezeichen aus Chrome, Edge, Firefox, Opera & Co. übernehmen\n- Backup für Lesezeichen, Notizen, Einstellungen und Passwörter\n- Download-Fenster, Dashboard mit Live-Werten, Boost und Minispiel",
-  "pub_date": "2026-11-25T08:10:16Z",
+  "pub_date": "2026-11-25T08:24:23Z",
   "platforms": {
     "windows-x86_64": {
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQ2JNWW9sWUtadjRySnBUZ1F3MFR5ajNETTJPdG5lYnN0VnpGRTJTTDVjY1UxV0FERkRNcDZPVVNTL2wwRWt4QVdWNkVYVmtDZk9yWXQ1N3dLRE8rQklrVHBGNk40cmdZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NTk0MjA5CWZpbGU6RnVzaW9uIEJyb3dzZXJfMC41LjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuNS4wCmsvZ0xLVnBNdlBZaWZQL05zYUhTUUlETEh1dnIrT3RndWtRSXhWQlNZUlZWYldhQnZJQVFRc2RORWl0U1pFK0g1SHhsUTF3NnFUTDBLV1dWMlZTQUFRPT0K",
