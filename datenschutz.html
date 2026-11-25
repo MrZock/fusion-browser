@@ -31,6 +31,7 @@
   <div class="note">
     <b>Kurzfassung:</b> Keine Cookies · kein Tracking · keine Werbung · keine Telemetrie.
     Verlauf, Lesezeichen, Notizen und Passwörter verlassen deinen PC nicht.
+    Die Spiele-Deals sind ab Werk ausgeschaltet.
   </div>
 
   <nav class="toc" aria-label="Inhalt">
@@ -93,7 +94,12 @@
         <tr><td><b>Verlauf, Lesezeichen, Notizen</b></td><td>lokal (Datenbank)</td><td>Verlauf abschaltbar und löschbar (Einstellungen › Privatsphäre)</td></tr>
         <tr><td><b>Passwörter</b></td><td>lokal</td><td>verschlüsselt mit Windows (DPAPI), nur unter deinem Windows-Konto lesbar; Anzeigen erst nach Windows Hello</td></tr>
         <tr><td><b>Cookies &amp; Anmeldungen</b></td><td>lokal (Browser-Profil)</td><td>wie in jedem Browser, von den besuchten Seiten gesetzt</td></tr>
-        <tr><td><b>Einstellungen, Sitzung, Dashboard</b></td><td>lokal</td><td>—</td></tr>
+        <tr><td><b>Einstellungen, Sitzung, Dashboard</b></td><td>lokal</td><td>auch Fenster-Layouts und Tab-Stapel</td></tr>
+        <tr><td><b>Berechtigungen pro Website</b></td><td>lokal (Datenbank)</td><td>deine Entscheidungen zu Kamera, Mikrofon, Standort usw.; jederzeit änderbar</td></tr>
+        <tr><td><b>Inkognito-Fenster</b></td><td>eigenes, vorübergehendes Profil</td><td>kein Verlauf, keine Sitzung, keine Notizen; das Profil wird beim Schließen verworfen. Heruntergeladene Dateien bleiben. Gegenüber besuchten Seiten und deinem Netzwerk macht Inkognito nicht anonym.</td></tr>
+        <tr><td><b>PIN der Boss-Taste</b></td><td>lokal</td><td>nur als gesalzener Prüfwert; Windows Hello wickelt Windows selbst ab</td></tr>
+        <tr><td><b>Wunschliste &amp; Spiele-Deals</b></td><td>lokal</td><td>nur wenn die Spiele-Deals eingeschaltet sind</td></tr>
+        <tr><td><b>Umzug aus anderen Browsern</b></td><td>lokal</td><td>deren Daten werden nur gelesen, nie verändert</td></tr>
         <tr><td><b>Backups</b></td><td>wo du sie speicherst</td><td>Passwörter darin nur mit deinem Backup-Passwort verschlüsselt</td></tr>
       </tbody>
     </table>
@@ -117,7 +123,13 @@
         <tr><td><b>easylist.to</b></td><td>etwa wöchentlich: Filterlisten des Werbe- und Tracker-Blockers</td><td>ja (Blocker aus)</td></tr>
         <tr><td><b>Cloudflare 1.1.1.1</b> bzw. Google 8.8.8.8</td><td>alle 10 s ein kurzer Verbindungsaufbau für die Ping-Anzeige, ohne Datenübertragung</td><td>ja (Einstellungen › Dashboard)</td></tr>
         <tr><td><b>Seiten im Schnellzugriff</b></td><td>Laden der Seitensymbole (favicon) auf dem Dashboard</td><td>Kacheln entfernen</td></tr>
-        <tr><td><b>Gewählte Suchmaschine</b></td><td>nur wenn du in der Adressleiste suchst</td><td>Suchmaschine wählbar</td></tr>
+        <tr><td><b>Gewählte Suchmaschine</b></td><td>nur wenn du in der Adressleiste oder der globalen Suchleiste suchst</td><td>Suchmaschine wählbar</td></tr>
+        <tr><td><b>Seiten der Such-Kürzel</b></td><td>Laden der Seitensymbole, wenn die Liste der Kürzel angezeigt wird (Einstellungen, Ersteinrichtung)</td><td>ja: dem Kürzel ein eigenes Emoji geben oder es löschen</td></tr>
+        <tr><td><b>Neutrale Seite der Boss-Taste</b> (ab Werk de.wikipedia.org)</td><td>nur wenn die Boss-Taste eine neutrale Seite zeigen soll und du sie drückst</td><td>ja (Standard: nur ausblenden); Adresse wählbar</td></tr>
+        <tr><td><b>CheapShark</b> (cheapshark.com)</td><td>Spiele-Deals: alle 6 Stunden Angebote und Shops; beim Filtern; beim Suchen für die Wunschliste der eingetippte Spieltitel, für Preisprüfungen die Nummern deiner Wunschspiele. Übertragen wird außerdem die Programmkennung mit Version (von CheapShark verlangt). Angebote öffnen über die Weiterleitung von CheapShark.</td><td>ab Werk aus (Einstellungen › Gaming)</td></tr>
+        <tr><td><b>GamerPower</b> (gamerpower.com)</td><td>Spiele-Deals: alle 6 Stunden die laufenden Gratis-Aktionen; „Holen“ öffnet deren Seite</td><td>ab Werk aus</td></tr>
+        <tr><td><b>Europäische Zentralbank</b> (ecb.europa.eu)</td><td>Spiele-Deals: alle 6 Stunden der Wechselkurs Euro/US-Dollar</td><td>ab Werk aus</td></tr>
+        <tr><td><b>Bildserver der Shops</b> (z. B. Steam) und GamerPower</td><td>Vorschaubilder, wenn Deals auf der Seite oder der Startseite angezeigt werden</td><td>ab Werk aus; Übersicht auf der Startseite einzeln abschaltbar</td></tr>
       </tbody>
     </table>
   </div>
