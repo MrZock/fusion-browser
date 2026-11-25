@@ -1,0 +1,71 @@
+/* Rechtliche Seiten (Impressum, Datenschutz, Lizenzen) – schlicht im Flow-Stil */
+:root {
+  --paper: #f3efe6;
+  --card: #f8f5ee;
+  --ink: #141414;
+  --text-2: #4a463e;
+  --line: rgba(20, 20, 20, 0.14);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #121212;
+    --card: #1b1b1b;
+    --ink: #efebe2;
+    --text-2: #b9b4a8;
+    --line: rgba(239, 235, 226, 0.14);
+    color-scheme: dark;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.65 'Segoe UI Variable Text', 'Segoe UI', Inter, system-ui, -apple-system, sans-serif;
+}
+.legal {
+  width: min(820px, 100% - 32px);
+  margin: 0 auto;
+  padding: 40px 0 80px;
+}
+.legal h1 {
+  font: 800 clamp(34px, 6vw, 48px) / 1.05 'Segoe UI Variable Display', 'Segoe UI', system-ui, sans-serif;
+  margin: 18px 0 24px;
+}
+.legal h2 {
+  margin: 34px 0 8px;
+  font-size: 20px;
+}
+.legal h3 {
+  margin: 20px 0 6px;
+  font-size: 16px;
+}
+.legal p,
+.legal li {
+  color: var(--text-2);
+}
+.legal a {
+  color: inherit;
+}
+.legal table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.legal th,
+.legal td {
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+.legal .note {
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: var(--card);
+  box-shadow: inset 0 0 0 1px var(--line);
+  font-size: 14px;
+}
