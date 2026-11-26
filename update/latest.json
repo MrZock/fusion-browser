@@ -1,11 +1,11 @@
 {
-  "version": "3.3.0",
-  "notes": "- Aufgeräumte Leiste: KI, Downloads, Lesezeichen und ein Menü (drei Striche) mit den Seiten Lesezeichen, Verlauf, Downloads und Notizen, dazu Inkognito und Einstellungen\n- Der Lesezeichen-Knopf speichert die aktuelle Seite, den Namen wählst du dabei selbst\n- Menü, Lesezeichen-, Download-, Berechtigungs- und Notiz-Fenster liegen jetzt über der Webseite, statt sie zu verkleinern\n- Lesezeichenleiste dauerhaft anzeigen: Häkchen beim Speichern oder oben auf der Lesezeichen-Seite\n- Verlauf löschen für die letzte Stunde, die letzten 24 Stunden, die letzte Woche oder komplett\n- Fusion lässt sich in Windows als Standard-App für PDF, HTML und weitere Dokumente wählen und öffnet diese Dateien",
-  "pub_date": "2026-11-26T08:09:18Z",
+  "version": "3.4.0",
+  "notes": "- Weihnachts-Edition, hell und dunkel, mit Schneefall, Lichterkette und Schneehaube – nur Weihnachten 2026 zu bekommen (Start zwischen dem 1.12. und dem 6.1.)\n- Vom 1. Dezember bis 6. Januar stellt Fusion automatisch um und danach wieder zurück (abschaltbar)\n- Startseite mit Countdown bis Heiligabend, Adventskalender mit Tipps und vier Winter-Hintergründen\n- Eigene Seitensuche (Strg+F) mit Treffer-Zähler, Markierungen, Groß-/Kleinschreibung und ganzen Wörtern\n- Strg+Umschalt+F durchsucht alle geöffneten Tabs und springt per Klick zum Treffer\n- Neues geheimes Design „Lofi-Katze“: Pixel-Zimmer im Abendrot, eine Katze, die auf den Tabs herumläuft, und leise Lofi-Musik – wie du es freischaltest, verrät dir ein Hinweis in den Einstellungen\n- Geheime Designs und Spezial-Editionen liegen in den Einstellungen in eigenen Klappen",
+  "pub_date": "2026-11-26T09:42:10Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQ2JNWW9sWUtadjNzalNGUVJUU3JvL0JyclUyRW1YYjQrM1d3bFFhbi9WUDBMRjlaZzI4c3YxbWk2Z1ZRRWJkaGJlbHF6UlJpeS83dWZ6Q05LVDA0VUsxditMdS9nTmd3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjgwNTUwCWZpbGU6RnVzaW9uIEJyb3dzZXJfMy4zLjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjMuMy4wCjFpeHc5ZFBKWjNBdG42VHhhZ0tUS1g5ZXcwcXM3anVDNDBFbDlQRUJ6Sko0ZEg1S29MUUlLUDVVeENGZGhnMVd4MGdibUdESGpPekdJbkloMVpFcUJBPT0K",
-      "url": "https://mrzock.github.io/fusion-browser/download/Fusion-Browser_3.3.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQ2JNWW9sWUtadjQ5c0xvK2RSUTQxaDZzaTBRb3l5TEhKMG5NdzhUVHZQYWNEMDd4MWpGOVd2VmRaVW1vOW56SjM0Y0FNSXBmWUZsL2lxejlldGpGSHBzemtKSFRuOVFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1Njg2MTE4CWZpbGU6RnVzaW9uIEJyb3dzZXJfMy40LjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjMuNC4wCnpidUxIcGxFM1VDMUQ5TXVHZFJVQ1FPTVFzYUppZ3hCSXBYM2NHNUJQYjBvbVVBZUlGUjFBWk5Cc2pyOVlzRUZGeWFYL3FQNCsvTVgzSjhJZFE3ZEFnPT0K",
+      "url": "https://mrzock.github.io/fusion-browser/download/Fusion-Browser_3.4.0_x64-setup.exe"
     }
   }
 }
