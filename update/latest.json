@@ -1,11 +1,11 @@
 {
-  "version": "3.4.0",
-  "notes": "- Weihnachts-Edition, hell und dunkel, mit Schneefall, Lichterkette und Schneehaube – nur Weihnachten 2026 zu bekommen (Start zwischen dem 1.12. und dem 6.1.)\n- Vom 1. Dezember bis 6. Januar stellt Fusion automatisch um und danach wieder zurück (abschaltbar)\n- Startseite mit Countdown bis Heiligabend, Adventskalender mit Tipps und vier Winter-Hintergründen\n- Eigene Seitensuche (Strg+F) mit Treffer-Zähler, Markierungen, Groß-/Kleinschreibung und ganzen Wörtern\n- Strg+Umschalt+F durchsucht alle geöffneten Tabs und springt per Klick zum Treffer\n- Neues geheimes Design „Lofi-Katze“: Pixel-Zimmer im Abendrot, eine Katze, die auf den Tabs herumläuft, und leise Lofi-Musik – wie du es freischaltest, verrät dir ein Hinweis in den Einstellungen\n- Geheime Designs und Spezial-Editionen liegen in den Einstellungen in eigenen Klappen",
-  "pub_date": "2026-11-26T09:42:10Z",
+  "version": "3.5.0",
+  "notes": "- Zoom: Strg + Mausrad, Zwei-Finger-Geste auf dem Touchpad und Strg + Plus/Minus; die Adressleiste zeigt den Wert, ein Klick setzt auf 100 % zurück\n- Dateien hineinziehen: Auf das Fenster oder eine Webseite gezogene Dateien öffnen sich in neuen Tabs, auf Wunsch als Stapel\n- Eigene Ansichten für Bilder (Zoom, Drehen, Blättern), Videos, Musik, Markdown, JSON mit Suche, sortierbare CSV-Tabellen und Quelltext\n- Unbekannte Dateien zeigen eine Info-Karte mit „Mit Standardprogramm öffnen“; Programme führt Fusion nie aus\n- Auf Wunsch „Mit Fusion öffnen“ im Rechtsklick-Menü des Explorers\n- Lokale Webseiten laufen jetzt aus Sicherheitsgründen ohne Skripte",
+  "pub_date": "2026-11-26T10:29:04Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQ2JNWW9sWUtadjQ5c0xvK2RSUTQxaDZzaTBRb3l5TEhKMG5NdzhUVHZQYWNEMDd4MWpGOVd2VmRaVW1vOW56SjM0Y0FNSXBmWUZsL2lxejlldGpGSHBzemtKSFRuOVFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1Njg2MTE4CWZpbGU6RnVzaW9uIEJyb3dzZXJfMy40LjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjMuNC4wCnpidUxIcGxFM1VDMUQ5TXVHZFJVQ1FPTVFzYUppZ3hCSXBYM2NHNUJQYjBvbVVBZUlGUjFBWk5Cc2pyOVlzRUZGeWFYL3FQNCsvTVgzSjhJZFE3ZEFnPT0K",
-      "url": "https://mrzock.github.io/fusion-browser/download/Fusion-Browser_3.4.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQ2JNWW9sWUtadjh0T1piZ1VhaEVDaGwvRWduUVBaY0dYdGMvRTFQZGNTeStraVZCKzNrVGdYc2NwcHpPK2lGSVVWTG1WNmdrdzMrUmoxbWVlbWF1K3BHQVA5VWp2SndFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1Njg4OTA3CWZpbGU6RnVzaW9uIEJyb3dzZXJfMy41LjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjMuNS4wCkVHMW9UNFMxdTVkNTJaaUJFaHBPYTBKTzBteE1nb3RSWDNOdHMyck85S21JeVJ3OVQzVVRDbnR2eElZUDc0MTFGVUtLSzlrTlgxQVNCY25uYzZBNkJnPT0K",
+      "url": "https://mrzock.github.io/fusion-browser/download/Fusion-Browser_3.5.0_x64-setup.exe"
     }
   }
 }
