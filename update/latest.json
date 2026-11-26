@@ -1,11 +1,11 @@
 {
-  "version": "3.5.0",
-  "notes": "- Zoom: Strg + Mausrad, Zwei-Finger-Geste auf dem Touchpad und Strg + Plus/Minus; die Adressleiste zeigt den Wert, ein Klick setzt auf 100 % zurück\n- Dateien hineinziehen: Auf das Fenster oder eine Webseite gezogene Dateien öffnen sich in neuen Tabs, auf Wunsch als Stapel\n- Eigene Ansichten für Bilder (Zoom, Drehen, Blättern), Videos, Musik, Markdown, JSON mit Suche, sortierbare CSV-Tabellen und Quelltext\n- Unbekannte Dateien zeigen eine Info-Karte mit „Mit Standardprogramm öffnen“; Programme führt Fusion nie aus\n- Auf Wunsch „Mit Fusion öffnen“ im Rechtsklick-Menü des Explorers\n- Lokale Webseiten laufen jetzt aus Sicherheitsgründen ohne Skripte",
-  "pub_date": "2026-11-26T10:29:04Z",
+  "version": "3.6.0",
+  "notes": "- Alle Designs neu gestaltet: gezeichnete Hintergründe (Berge, Nebelwald, Sonnenuntergang, Neonstadt, Winterdorf und mehr), Karten für bessere Lesbarkeit, farbige Website-Symbole und eigene Schriftzüge\n- Lofi-Katze gibt es jetzt auch als Nacht-Variante mit Mond, Sternen und Leuchtschild\n- Neu: das Maskottchen „Fusi“, ein schwebender Kristall mit Augen, der der Maus folgt – auf der Startseite, in der Ersteinrichtung und mit Mütze im Weihnachtsdesign (abschaltbar)\n- Eigene Hinweisseite, wenn eine Seite nicht erreichbar ist oder das Internet fehlt; ist die Verbindung zurück, lädt Fusion neu\n- Nach einem Update zeigt die Startseite einmal „Neu in Fusion“\n- Konfetti, wenn du den letzten Tab schließt",
+  "pub_date": "2026-11-26T11:39:43Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQ2JNWW9sWUtadjh0T1piZ1VhaEVDaGwvRWduUVBaY0dYdGMvRTFQZGNTeStraVZCKzNrVGdYc2NwcHpPK2lGSVVWTG1WNmdrdzMrUmoxbWVlbWF1K3BHQVA5VWp2SndFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1Njg4OTA3CWZpbGU6RnVzaW9uIEJyb3dzZXJfMy41LjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjMuNS4wCkVHMW9UNFMxdTVkNTJaaUJFaHBPYTBKTzBteE1nb3RSWDNOdHMyck85S21JeVJ3OVQzVVRDbnR2eElZUDc0MTFGVUtLSzlrTlgxQVNCY25uYzZBNkJnPT0K",
-      "url": "https://mrzock.github.io/fusion-browser/download/Fusion-Browser_3.5.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQ2JNWW9sWUtadjNWQkpkYlppZGpXUTZrSFR0akJPYVQzRFhDTXptRHZuQ3N3eWpQTkRmMjFzT2NrOE5McFpGeHN0ejBvamZzMnJnS2tBenRrcC9kZHoraE5nZGpPOVFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjkzMTgxCWZpbGU6RnVzaW9uIEJyb3dzZXJfMy42LjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjMuNi4wCk56WGc1bUoyVzM3WTJmeVMvd3hYMUM4Tm0wK21MMk13NkMvSVpGZ1h3SFVNSTRSc2lOU2dKbEtIMlNTcGQ0LzJRRjhlc0p4QjVNYmI4ODNPaUx2akFnPT0K",
+      "url": "https://mrzock.github.io/fusion-browser/download/Fusion-Browser_3.6.0_x64-setup.exe"
     }
   }
 }
