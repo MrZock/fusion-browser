@@ -1,11 +1,11 @@
 {
-  "version": "3.6.0",
-  "notes": "- Alle Designs neu gestaltet: gezeichnete Hintergründe (Berge, Nebelwald, Sonnenuntergang, Neonstadt, Winterdorf und mehr), Karten für bessere Lesbarkeit, farbige Website-Symbole und eigene Schriftzüge\n- Lofi-Katze gibt es jetzt auch als Nacht-Variante mit Mond, Sternen und Leuchtschild\n- Neu: das Maskottchen „Fusi“, ein schwebender Kristall mit Augen, der der Maus folgt – auf der Startseite, in der Ersteinrichtung und mit Mütze im Weihnachtsdesign (abschaltbar)\n- Eigene Hinweisseite, wenn eine Seite nicht erreichbar ist oder das Internet fehlt; ist die Verbindung zurück, lädt Fusion neu\n- Nach einem Update zeigt die Startseite einmal „Neu in Fusion“\n- Konfetti, wenn du den letzten Tab schließt",
-  "pub_date": "2026-11-26T11:39:43Z",
+  "version": "3.7.0",
+  "notes": "- Updates haben jetzt eine eigene Seite: Sie öffnet sich beim Start, wenn eine neue Version bereitsteht, und zeigt danach einmal die Neuerungen",
+  "pub_date": "2026-11-26T12:35:33Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQ2JNWW9sWUtadjNWQkpkYlppZGpXUTZrSFR0akJPYVQzRFhDTXptRHZuQ3N3eWpQTkRmMjFzT2NrOE5McFpGeHN0ejBvamZzMnJnS2tBenRrcC9kZHoraE5nZGpPOVFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjkzMTgxCWZpbGU6RnVzaW9uIEJyb3dzZXJfMy42LjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjMuNi4wCk56WGc1bUoyVzM3WTJmeVMvd3hYMUM4Tm0wK21MMk13NkMvSVpGZ1h3SFVNSTRSc2lOU2dKbEtIMlNTcGQ0LzJRRjhlc0p4QjVNYmI4ODNPaUx2akFnPT0K",
-      "url": "https://mrzock.github.io/fusion-browser/download/Fusion-Browser_3.6.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQ2JNWW9sWUtadjcrKzR1NzQ2UHJ3MnZyVW51bkFGRWU1b2hvL1hpTTFLUXV1Um8xR2NlcTdCMDFHT0UwcjdrUU8rQndYWFBOVTJ3UDVhb3BGMzJIOXhieE1IL1JmaGcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1Njk2NTMxCWZpbGU6RnVzaW9uIEJyb3dzZXJfMy43LjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjMuNy4wCkp1Mkl2SzNvWW1HUjdDc0xHSlByb3lYQW9IV3RWdm1NYzJvMkIzYmMveDNrYmh2NGZ6THZsRXBrOVQ0OTk0a0ZMa1kxUHdGTmxUa2NLak90VzFNWERBPT0K",
+      "url": "https://mrzock.github.io/fusion-browser/download/Fusion-Browser_3.7.0_x64-setup.exe"
     }
   }
 }
