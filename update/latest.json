@@ -1,11 +1,11 @@
 {
-  "version": "3.7.0",
-  "notes": "- Updates haben jetzt eine eigene Seite: Sie öffnet sich beim Start, wenn eine neue Version bereitsteht, und zeigt danach einmal die Neuerungen",
-  "pub_date": "2026-11-26T12:35:33Z",
+  "version": "3.8.0",
+  "notes": "- Strg+Tab springt jetzt zum zuletzt benutzten Tab; Strg gedrückt halten und mehrmals Tab zeigt einen Umschalter mit Vorschau (umstellbar auf die Reihenfolge der Leiste)\n- Neue Auswahl-Toolbar: Über markiertem Text erscheinen Kopieren, Als Markdown kopieren, Suchen, Übersetzen, KI fragen, Notiz, Teilen und Vorlesen – sortierbar, einzeln abschaltbar und pro Website sperrbar\n- Kleine Helfer in der Leiste: Rechner mit Verlauf, Stoppuhr mit Runden, mehrere Timer mit Benachrichtigung und Ton, Würfel und Münze, Zufallsauswahl, Farbwähler mit Pipette, Passwort-Generator (speichert in den Passwort-Manager), Einheiten- und Währungsumrechner und ein Notizzettel – einzeln an die Leiste heftbar\n- Fusion-Bildschirmschoner: nach 10 Minuten ohne Eingabe (einstellbar) große Uhr, Datum, langsam bewegter Hintergrund (wie die Startseite oder eigene Bilder) und ein schlafender Fusi – nicht bei Videos, Vollbild, Meetings oder im Gaming-Modus; jede Eingabe beendet ihn, ohne die Seite zu berühren\n- Neue Seite „Über Fusion“ (im Menü) – und ein paar versteckte Überraschungen mit Fusi; wer sie nicht mag, schaltet sie unter Darstellung › Easter Eggs ab\n- RSS-Reader „Feeds“ (fusion://feeds und als Panel in der Leiste): Feed-Symbol in der Adressleiste zum Abonnieren, Ordner, Ungelesen-Zähler, Merken, Suche, Podcasts mit Player (Tempo, Position wird gemerkt), OPML-Import und -Export, Startpakete (Gaming-News, Tech, Patch-Notes) und Benachrichtigungen pro Feed",
+  "pub_date": "2026-11-27T09:53:36Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQ2JNWW9sWUtadjcrKzR1NzQ2UHJ3MnZyVW51bkFGRWU1b2hvL1hpTTFLUXV1Um8xR2NlcTdCMDFHT0UwcjdrUU8rQndYWFBOVTJ3UDVhb3BGMzJIOXhieE1IL1JmaGcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1Njk2NTMxCWZpbGU6RnVzaW9uIEJyb3dzZXJfMy43LjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjMuNy4wCkp1Mkl2SzNvWW1HUjdDc0xHSlByb3lYQW9IV3RWdm1NYzJvMkIzYmMveDNrYmh2NGZ6THZsRXBrOVQ0OTk0a0ZMa1kxUHdGTmxUa2NLak90VzFNWERBPT0K",
-      "url": "https://mrzock.github.io/fusion-browser/download/Fusion-Browser_3.7.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQ2JNWW9sWUtadjcreWcvTXFQWkNJU0FocXJCbXJza2djK1Y3YWpxQmd0T2haM0gyOVBpU2JUck85eWdaTnR2UTVBT3ZPa2tjVFNaZW55VExPZFBGdHhZQ0s5T2NEamc0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NzczMjA2CWZpbGU6RnVzaW9uIEJyb3dzZXJfMy44LjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjMuOC4wCndraHU2SiswOTlkZE1HL1M0VnIrYzM2WWZ6MTVhMXlJcVB0OURLbTZJWWRBaWQxMHcxSXJoTm5JNFhSTEkxblVMUTh2SzlUb1daUkw1UDFOc3dDSUFBPT0K",
+      "url": "https://mrzock.github.io/fusion-browser/download/Fusion-Browser_3.8.0_x64-setup.exe"
     }
   }
 }
